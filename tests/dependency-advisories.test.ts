@@ -50,6 +50,15 @@ describe("dependency advisory baseline (issue #8)", () => {
     expect(pkg.overrides?.sharp).toMatch(/>=?0\.35\.0/);
   });
 
+  it("pins nanoid at or above 3.3.18 (GHSA-2v37-7h3g-55p8)", () => {
+    const pkg = readJson("package.json") as {
+      overrides?: Record<string, string>;
+    };
+
+    expect(pkg.overrides?.nanoid).toBeDefined();
+    expect(isAtLeast(pkg.overrides!.nanoid, [3, 3, 18])).toBe(true);
+  });
+
   it("configures Dependabot for npm and GitHub Actions", () => {
     const yaml = readFileSync(resolve(root, ".github/dependabot.yml"), "utf8");
 
