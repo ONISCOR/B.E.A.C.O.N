@@ -11,13 +11,13 @@
     "test:watch": "node scripts/with-system-ca.mjs vitest"
   },
   "dependencies": {
-    "@react-three/drei": "^10.7.8",
-    "@react-three/fiber": "^9.7.0",
-    "next": "16.3.0",
-    "react": "19.2.8",
-    "react-dom": "19.2.8",
-    "three": "^0.185.1",
-    "zod": "^4.4.3"
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.1",
+    "next": "16.3.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "three": "^0.186.1",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
